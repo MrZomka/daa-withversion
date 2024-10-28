@@ -1,5 +1,5 @@
-name: decryptedappstore-action
-author: level3tjg
+name: daa-withversion
+author: MrZomka
 description: Download decrypted IPA from https://armconverter.com/decryptedappstore
 inputs:
   appstore_url:
