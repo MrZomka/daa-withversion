@@ -1,14 +1,4 @@
-# decryptedappstore-action
-
-Download decrypted IPA files from https://armconverter.com/decryptedappstore
-
-## Setup
-
-- Go to https://armconverter.com/decryptedappstore and log into an iOSGods account
-- Open your browser's dev tools, navigate to "Storage" and copy the value for the "session" cookie
-- Create a new repository secret named `SESSION_TOKEN` (or something similar) and paste the session cookie as the value
-
-Eventually your decryptedappstore session will expire and you'll need to run through this process again
+# This is a fork of level3tjg's decryptedappstore-action to add the version to the IPA's file name. May be useful for those who want to automate an AltStore source :)
 
 ## Inputs
 ```yaml
@@ -39,7 +29,7 @@ inputs:
 ```yaml
 steps:
   - name: Download IPA
-    uses: level3tjg/decryptedappstore-action@main
+    uses: MrZomka/daa-withversion@main
     with:
       appstore_url: "https://apps.apple.com/us/app/youtube-watch-listen-stream/id544007664"
       path: App.ipa
